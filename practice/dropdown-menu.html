@@ -1,70 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mobile Menu</title>
-    <style>
-      body{
-        margin:0
-        padding:0
-      }
 
-      nav {
-        background-color: #333;
-        color: white;
-        padding: 10px;
-      }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Dropdown Menu</title>
+  <style>
+    body {
+      /* reset */
+      margin: 0;
+      padding: 0;
+    }
 
-      nav button {
-        background-color: #333;
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-      }
+    nav {
+      background: #333;
+      padding: 10px;
+    }
 
-      .dropdown {
-        display: none;
-        background: #555
-      }
+    nav button {
+      background-color: #444;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+    }
 
-      .dropdown a {
-        color: white;
-        padding: 10px;
-        text-decoration: none;
-        display: block;
-      }
+    .dropdown {
+      display: none;
+      background: #555;
+    }
 
-      .dropdown.show {
-        background: black;
-      }
+    .dropdown.show {
+      display: block;
+    }
 
-      .dropdown a:hover {
-        background: #444;
-      }
+    .dropdown a {
+      color: #fff;
+      padding: 10px;
+      display: block;
+      text-decoration: none;
+    }
 
-    </style>
-  </head>
+    .dropdown a:hover {
+      background: #666;
+    }
+  </style>
+</head>
 
-  <body>
-    <nav>
-      <button onclick="toggleMenu()">Menu &#9662;</button>
-      <div class="dropdown" id=""menu">
-        <a href="#">Home</a>
-        <a href="#">Page1</a>
-        <a href="#">Page2</a>
-        <a href="#">Page3</a>
-        <a href="#">Page4</a>
-        <a href="#">Page5</a>
-      </div>
-    </nav>
-    <script>
-      function toggleMenu() {
-        document.getElementById("menu").classList.toggle("show");
-      }
+<body>
+  <nav>
+    <!-- https://www.w3schools.com/charsets/ref_utf_geometric.asp -->
+    <button onclick="toggleMenu()">Menu &#9662;</button>
+    <div class="dropdown" id="menu">
+      <a href="#homepage">Home</a>
+      <a href="#">Page1</a>
+      <a href="#">Page2</a>
+      <a href="#">Page3</a>
+      <a href="#">Page4</a>
+      <a href="#">Page5</a>
+    </div>
+  </nav>
 
-  
-  </body>
+  <!-- 
+    Scripts are often in the <head> </head> or just before the closing body tag.
+    Putting at the bottom helps ensure that the script runs after the DOM (think "page") is loaded. 
+  -->
+  <script>
+    function toggleMenu() {
+      // https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
+      // https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
+</body>
 
 </html>
