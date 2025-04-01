@@ -7,7 +7,6 @@
   <title>Mobile Dropdown Menu</title>
   <style>
     body {
-      /* reset */
       margin: 0;
       padding: 0;
     }
@@ -63,14 +62,8 @@
     </div>
   </nav>
 
-  <!-- 
-    Scripts are often in the <head> </head> or just before the closing body tag.
-    Putting at the bottom helps ensure that the script runs after the DOM (think "page") is loaded. 
-  -->
   <script>
     function toggleMenu() {
-      // https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
-      // https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle
       document.getElementById("menu").classList.toggle("show");
     }
   </script>
