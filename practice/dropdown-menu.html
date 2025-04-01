@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Menu</title>
+    <style>
+      body{
+        margin:0
+        padding:0
+      }
+
+      nav {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+      }
+
+      nav button {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .dropdown {
+        display: none;
+        background: #555
+      }
+
+      .dropdown a {
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown.show {
+        background: black;
+      }
+
+      .dropdown a:hover {
+        background: #444;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <button onclick="toggleMenu()">Menu &#9662;</button>
+      <div class="dropdown" id=""menu">
+        <a href="#">Home</a>
+        <a href="#">Page1</a>
+        <a href="#">Page2</a>
+        <a href="#">Page3</a>
+        <a href="#">Page4</a>
+        <a href="#">Page5</a>
+      </div>
+    </nav>
+    <script>
+      function toggleMenu() {
+        document.getElementById("menu").classList.toggle("show");
+      }
+
+  
+  </body>
+
+</html>
