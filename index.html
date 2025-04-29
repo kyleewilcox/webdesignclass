@@ -1,186 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Connected With Canines</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Arial", sans-serif;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connected With Canines</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>⭐ Connected With Canines</strong></div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="nav-menu" id="navMenu">
+      <a href="pages/about-us.html">About Us</a>
+      <a href="pages/our-values.html">Our Values</a>
+      <a href="pages/programs.html">Programs</a>
+      <a href="pages/testimonials.html">Testimonials</a>
+    </nav>
+  </header>
 
-      body {
-        line-height: 1.6;
-      }
+  <div class="section">
+    <h2>Build Your Bond Through Training</h2>
+    <p>Book a call with us today to get started on building your bond with your dog!</p>
+    <button class="button">Book Now</button>
+  </div>
 
-      /* Header Styles */
-      .header {
-        background-color: #f5b7d3;
-        padding: 20px;
-        text-align: center;
-      }
+  <div class="section">
+    <div class="circle"></div>
+    <h2>About Us</h2>
+    <p>
+      We are skilled trainers successfully certified by CPDT and AKC. Our expert team members
+      possess years of professional experience in training tailored to meet you and your dog’s needs.
+    </p>
+    <a href="#" class="small-button">Read More</a>
+  </div>
 
-      .nav {
-        margin-top: 20px;
-      }
+  <div class="section">
+    <h2>Our Mission Statement</h2>
+    <p>
+      We empower owners with knowledge and confidence and train their dogs with proven
+      techniques. Our goal is to create success for everyone through positive reinforcement,
+      support, and compassion.
+    </p>
+  </div>
 
-      .nav a {
-        color: #000000;
-        text-decoration: none;
-        margin: 0 15px;
-        padding: 5px 10px;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-      }
+  <div class="section">
+    <div class="star"></div>
+    <h2>Our Vision Statement</h2>
+    <p>
+      Our vision is to forge a connection between parent and pet, creating a calm, confident
+      relationship. Our goal is to see dogs that are respected, cherished, and understood by their owners.
+    </p>
+    <a href="#" class="small-button">Our Vision</a>
+  </div>
 
-      .nav a:hover {
-        background-color: #fcf5c7;
-      }
+  <div class="section">
+    <h2>Why train your dog through our services?</h2>
+    <h3>Connection & Bond</h3>
+    <p>
+      Build your connection and bond by learning more about your dog and how they think.
+    </p>
+    <h3>Independence & Freedom</h3>
+    <p>
+      We focus on how training helps dogs and humans gain more independence, reducing stress and making your dog respond more consistently.
+    </p>
+    <h3>Positive Learning & Experiences</h3>
+    <p>
+      We guarantee a positive experience for dogs and owners, focusing on communication and learning through positive reinforcement.
+    </p>
+  </div>
 
-      /* Hero Section */
-      .hero {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-          url("dog-training.jpg") center/cover;
-        height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-align: center;
-      }
-
-      .hero h1 {
-        font-size: 3em;
-        margin-bottom: 20px;
-      }
-
-      /* Services Section */
-      .services {
-        padding: 50px 20px;
-        background-color: #f5f5f5;
-      }
-
-      .service-card {
-        background: white;
-        padding: 20px;
-        margin: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-      }
-
-      .service-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .service-card h3 {
-        color: #0097b2;
-        margin-bottom: 15px;
-      }
-
-      /* Pricing Section */
-      .pricing {
-        padding: 50px 20px;
-        background-color: #a0ced9;
-        color: white;
-        text-align: center;
-      }
-
-      /* Footer */
-      .footer {
-        background-color: #f7cdd0;
-        color: white;
-        padding: 30px 20px;
-        text-align: center;
-      }
-
-      .button {
-        background-color: #0097b2;
-        color: white;
-        padding: 10px 30px;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .button:hover {
-        background-color: #007693;
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      @media (max-width: 768px) {
-        .nav {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header class="header">
-      <h1>Connected With Canines</h1>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="pages/about-us.html">About Us</a>
-        <a href="#our-values">Our Values</a>
-        <a href="#programs">Programs</a>
-        <a href="#testimonials">Testimonials</a>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <div>
-        <h1>Transform Your Dog's Behavior</h1>
-        <p>Professional dog training services for puppies and adult dogs</p>
-        <button class="button">Book Consultation</button>
-      </div>
-    </section>
-
-    <section class="services" id="services">
-      <div class="grid">
-        <div class="service-card">
-          <h3>Puppy Training</h3>
-          <p>
-            Basic obedience and socialization for puppies 8 weeks to 6 months
-          </p>
-          <button class="button">Learn More</button>
-        </div>
-        <div class="service-card">
-          <h3>Behavior Modification</h3>
-          <p>Addressing aggression, anxiety, and other behavioral issues</p>
-          <button class="button">Learn More</button>
-        </div>
-        <div class="service-card">
-          <h3>Advanced Obedience</h3>
-          <p>
-            Take your dog's training to the next level with advanced commands
-          </p>
-          <button class="button">Learn More</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="pricing">
-      <h2>Flexible Pricing Options</h2>
-      <p>Private sessions starting at $75/hour</p>
-      <p>Package discounts available</p>
-    </section>
-
-    <footer class="footer" id="contact">
-      <p>Contact us: (208) 884-2673 | kwilcox@carroll.edu</p>
-      <p>Copyright</p>
-    </footer>
-  </body>
+  <script>
+    function toggleMenu() {
+      document.body.classList.toggle('menu-open');
+    }
+  </script>
+</body>
 </html>

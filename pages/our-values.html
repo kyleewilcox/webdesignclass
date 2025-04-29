@@ -3,8 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Our Values</title>
+    <link rel="stylesheet" href="../styles/base.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <h1>Connected With Canines</h1>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav class="nav-menu" id="navMenu">
+        <a href="../index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="our-values.html">Our Values</a>
+        <a href="programs.html">Programs</a>
+        <a href="testimonials.html">Testimonials</a>
+      </nav>
+    </header>
+    <script>
+      function toggleMenu() {
+        document.body.classList.toggle('menu-open');
+      }
+    </script>
+  </body>
   <footer>Copyright</footer>
 </html>
+
