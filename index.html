@@ -1,182 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connected With Canines</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
 
-        body {
-            line-height: 1.6;
-        }
+      body {
+        line-height: 1.6;
+      }
 
-        /* Header Styles */
-        .header {
-            background-color: #f5b7d3;
-            padding: 20px;
-            text-align: center;
-        }
+      /* Header Styles */
+      .header {
+        background-color: #f5b7d3;
+        padding: 20px;
+        text-align: center;
+      }
 
+      .nav {
+        margin-top: 20px;
+      }
+
+      .nav a {
+        color: #000000;
+        text-decoration: none;
+        margin: 0 15px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .nav a:hover {
+        background-color: #fcf5c7;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("dog-training.jpg") center/cover;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+      }
+
+      /* Services Section */
+      .services {
+        padding: 50px 20px;
+        background-color: #f5f5f5;
+      }
+
+      .service-card {
+        background: white;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .service-card h3 {
+        color: #0097b2;
+        margin-bottom: 15px;
+      }
+
+      /* Pricing Section */
+      .pricing {
+        padding: 50px 20px;
+        background-color: #a0ced9;
+        color: white;
+        text-align: center;
+      }
+
+      /* Footer */
+      .footer {
+        background-color: #f7cdd0;
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      .button {
+        background-color: #0097b2;
+        color: white;
+        padding: 10px 30px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .button:hover {
+        background-color: #007693;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 768px) {
         .nav {
-            margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
         }
-
-        .nav a {
-            color: #000000;
-            text-decoration: none;
-            margin: 0 15px;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .nav a:hover {
-            background-color: #fcf5c7;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('dog-training.jpg') center/cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 50px 20px;
-            background-color: #f5f5f5;
-        }
-
-        .service-card {
-            background: white;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-card h3 {
-            color: #0097b2;
-            margin-bottom: 15px;
-        }
-
-        /* Pricing Section */
-        .pricing {
-            padding: 50px 20px;
-            background-color: #a0ced9;
-            color: white;
-            text-align: center;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #f7cdd0;
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        .button {
-            background-color: #0097b2;
-            color: white;
-            padding: 10px 30px;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .button:hover {
-            background-color: #007693;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 768px) {
-            .nav {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <h1>Connected With Canines</h1>
-        <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="pages/about-us.html">About Us</a>
-            <a href="#our-values">Our Values</a>
-            <a href="#programs">Programs</a>
-            <a href="#testimonials">Testimonials</a>
-        </nav>
+      <h1>Connected With Canines</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="pages/about-us.html">About Us</a>
+        <a href="#our-values">Our Values</a>
+        <a href="#programs">Programs</a>
+        <a href="#testimonials">Testimonials</a>
+      </nav>
     </header>
 
     <section class="hero">
-        <div>
-            <h1>Transform Your Dog's Behavior</h1>
-            <p>Professional dog training services for puppies and adult dogs</p>
-            <button class="button">Book Consultation</button>
-        </div>
+      <div>
+        <h1>Transform Your Dog's Behavior</h1>
+        <p>Professional dog training services for puppies and adult dogs</p>
+        <button class="button">Book Consultation</button>
+      </div>
     </section>
 
     <section class="services" id="services">
-        <div class="grid">
-            <div class="service-card">
-                <h3>Puppy Training</h3>
-                <p>Basic obedience and socialization for puppies 8 weeks to 6 months</p>
-                <button class="button">Learn More</button>
-            </div>
-            <div class="service-card">
-                <h3>Behavior Modification</h3>
-                <p>Addressing aggression, anxiety, and other behavioral issues</p>
-                <button class="button">Learn More</button>
-            </div>
-            <div class="service-card">
-                <h3>Advanced Obedience</h3>
-                <p>Take your dog's training to the next level with advanced commands</p>
-                <button class="button">Learn More</button>
-            </div>
+      <div class="grid">
+        <div class="service-card">
+          <h3>Puppy Training</h3>
+          <p>
+            Basic obedience and socialization for puppies 8 weeks to 6 months
+          </p>
+          <button class="button">Learn More</button>
         </div>
+        <div class="service-card">
+          <h3>Behavior Modification</h3>
+          <p>Addressing aggression, anxiety, and other behavioral issues</p>
+          <button class="button">Learn More</button>
+        </div>
+        <div class="service-card">
+          <h3>Advanced Obedience</h3>
+          <p>
+            Take your dog's training to the next level with advanced commands
+          </p>
+          <button class="button">Learn More</button>
+        </div>
+      </div>
     </section>
 
     <section class="pricing">
-        <h2>Flexible Pricing Options</h2>
-        <p>Private sessions starting at $75/hour</p>
-        <p>Package discounts available</p>
+      <h2>Flexible Pricing Options</h2>
+      <p>Private sessions starting at $75/hour</p>
+      <p>Package discounts available</p>
     </section>
 
     <footer class="footer" id="contact">
-        <p>Contact us: (208) 884-2673 | kwilcox@carroll.edu</p>
-        <p>Copyright</p>
+      <p>Contact us: (208) 884-2673 | kwilcox@carroll.edu</p>
+      <p>Copyright</p>
     </footer>
-</body>
+  </body>
 </html>

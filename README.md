@@ -1,2 +1,3 @@
 # webdesignclass
-**This is a markdown folder
+
+\*\*This is a markdown folder
