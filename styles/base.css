@@ -3,94 +3,187 @@
   makes boxes borders etc actually make sense :)
   Here is link to better explain: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
 */
-* 
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  box-sizing: border-box;
+}
+/* Font Imports */
+.chango-text {
+  font-family: 'Chango', cursive;
+}
+
+.comfortaa-text {
+  font-family: 'Comfortaa', cursive;
+}
+
+body {
+  font-family: 'Chango', cursive;
   color: #000;
+  background: #fff;
+  line-height: 1.4;
 }
+
+/* Header */
 header {
-  background-color: #f5b7d3;
-  padding: 20px;
+  background: #ff99cc;
+  color: #000;
+  padding: 1rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
+
+header .logo {
+  font-size: 1.2rem;
+}
+
+/* Mobile Menu */
 .menu-toggle {
-  font-size: 24px;
+  font-size: 1.5rem;
   background: none;
   border: none;
   cursor: pointer;
 }
+
 .nav-menu {
   display: none;
   flex-direction: column;
   background-color: #f5b7d3;
   position: absolute;
-  top: 60px;
-  right: 0;
+  top: 100%;
+  right: 1rem;
   width: 200px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
 .nav-menu a {
   padding: 15px;
   text-decoration: none;
   color: black;
   border-bottom: 1px solid #ddd;
 }
+
 .nav-menu a:hover {
   background-color: #d889c8;
   color: white;
 }
+
 .menu-open .nav-menu {
   display: flex;
 }
-.section {
-  padding: 20px;
+
+/* Hero Image Full Width */
+main {
+  padding: 0rem;
+}
+
+.hero {
+  margin: 0 -1rem;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+}
+
+/* Sections */
+section {
+  margin: 2rem 0;
+  padding: 0 1rem;
   text-align: center;
-  border-bottom: 1px solid #ddd;
 }
-.button {
-  background-color: #d889c8;
-  color: white;
-  padding: 10px 20px;
+
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+section p {
+  font-family: 'Comfortaa', cursive;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background: #ff99cc;
+  color: #000;
+  padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 2rem;
+  font-size: 1rem;
   cursor: pointer;
-  font-weight: bold;
+  font-family: 'Comfortaa', cursive;
 }
-.circle, .star {
-  width: 50px;
-  height: 50px;
-  margin: 10px auto;
-  background-color: #d889c8;
+
+section:last-of-type .btn + p {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
+
 .circle {
+  width: 4rem;
+  height: 4rem;
+  background: #ff99cc;
   border-radius: 50%;
+  margin: 1rem auto;
 }
+
 .star {
-  clip-path: polygon(
-    50% 0%, 61% 35%, 98% 35%,
-    68% 57%, 79% 91%,
-    50% 70%, 21% 91%,
-    32% 57%, 2% 35%,
-    39% 35%
-  );
+  font-size: 6rem;
+  color: #ff99cc;
+  margin: 0.5rem auto;
 }
-h2 {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 10px;
+
+/* Footer */
+footer {
+  background: #ff99cc;
+  color: #000;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
 }
-.small-button {
-  margin-top: 10px;
-  background-color: #f5b7d3;
-  color: black;
-  padding: 5px 10px;
-  border-radius: 3px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
+
+/* Testimonials Section */
+.testimonials {
+  margin: 2rem 0;
+}
+
+/* FAQ List Styling */
+ul.faq-list {
+  list-style-type: disc;
+  margin: 1.5rem auto;
+  padding-left: 2rem;
+  text-align: left;
+  max-width: 500px;
+  font-family: 'Comfortaa', cursive;
+  font-size: 0.9rem;
+}
+
+/* Desktop Overrides */
+@media (min-width: 600px) {
+  main {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .hero {
+    margin: 0;
+  }
+
+  section {
+    padding: 0;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    display: none !important;
+  }
 }

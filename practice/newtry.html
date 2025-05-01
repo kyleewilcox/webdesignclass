@@ -1,177 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dog Training Mobile Site</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-      color: #000;
-    }
-    header {
-      background-color: #f5b7d3;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .menu-toggle {
-      font-size: 24px;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-  
-    .nav-menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: #f5b7d3;
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-  
-    .menu-open .nav-menu {
-      display: flex;
-    }
-  
-    .nav-menu a {
-      width: 100%;
-      padding: 15px;
-      text-decoration: none;
-      color: black;
-      font-size: 1.2rem;
-      border-top: 1px solid #e19abc;
-      text-align: center;
-    }
-  
-    .nav-menu a:hover {
-      background-color: #d889c8;
-      color: white;
-    }
-    .section {
-      padding: 20px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-    }
-    .button {
-      background-color: #d889c8;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .circle, .star {
-      width: 50px;
-      height: 50px;
-      margin: 10px auto;
-      background-color: #d889c8;
-    }
-    .circle {
-      border-radius: 50%;
-    }
-    .star {
-      clip-path: polygon(
-        50% 0%, 61% 35%, 98% 35%,
-        68% 57%, 79% 91%,
-        50% 70%, 21% 91%,
-        32% 57%, 2% 35%,
-        39% 35%
-      );
-    }
-    h2 {
-      font-size: 1.2em;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    .small-button {
-      margin-top: 10px;
-      background-color: #f5b7d3;
-      color: black;
-      padding: 5px 10px;
-      border-radius: 3px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div><strong>⭐ Brand Name</strong></div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <nav class="nav-menu" id="navMenu">
-      <a href="page1.html">Home</a>
-      <a href="page2.html">About</a>
-      <a href="page3.html">Services</a>
-      <a href="page4.html">Contact</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Underdog Services</title>
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Font imports -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chango&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">⭐ Underdog Services</div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav class="nav-menu" id="navMenu">
+        <a href="pages/about-us.html">About Us</a>
+        <a href="pages/our-values.html">Our Values</a>
+        <a href="pages/programs.html">Programs</a>
+        <a href="pages/testimonials.html">Testimonials</a>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero / Build Your Bond -->
+      <section class="hero">
+        <img
+          src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg"
+          alt="Two yellow Labrador Retriever puppies"
+        />
+        <h2>Build Your Bond Through Training</h2>
+        <p>
+          Book a call with us today to get started on building your bond with
+          your dog!
+        </p>
+        <button class="btn">Book Now!</button>
+      </section>
 
-  <div class="section">
-    <h2>Build Your Bond Through Training</h2>
-    <p>Book a call with us today to get started on building your bond with your dog!</p>
-    <button class="button">Book Now</button>
-  </div>
+      <!-- About Us -->
+      <section>
+        <div class="circle"></div>
+        <h2>About Us</h2>
+        <p>
+          We are staffed by trainers educated in Animal Science and certified by
+          CCPDT and more. Our professional trainers consistently look for ways
+          to improve and broaden their methods to better meet you and your dogs’
+          needs!
+        </p>
+        <button class="btn">Read More!</button>
+      </section>
 
-  <div class="section">
-    <div class="circle"></div>
-    <h2>About Us</h2>
-    <p>
-      We are skilled trainers successfully certified by CPDT and AKC. Our expert team members
-      possess years of professional experience in training tailored to meet you and your dog’s needs.
-    </p>
-    <a href="#" class="small-button">Read More</a>
-  </div>
+      <!-- Mission Statement -->
+      <section>
+        <h2>Our Mission Statement</h2>
+        <p>
+          We empower dog parents with the knowledge and confidence needed to
+          enrich and strengthen the relationship with their dogs in a way that
+          allows for stress-free days and promotes positive reinforcement,
+          support, and compassion.
+        </p>
+      </section>
 
-  <div class="section">
-    <h2>Our Mission Statement</h2>
-    <p>
-      We empower owners with knowledge and confidence and train their dogs with proven
-      techniques. Our goal is to create success for everyone through positive reinforcement,
-      support, and compassion.
-    </p>
-  </div>
+      <!-- Vision Statement -->
+      <section>
+        <div class="star">★</div>
+        <h2>Our Vision Statement</h2>
+        <p>
+          Our vision is to foster a community where dog parents feel confident
+          in their relationship with their dogs and where dogs feel supported,
+          celebrated, and loved by their parents.
+        </p>
+        <button class="btn">Our Values!</button>
+      </section>
 
-  <div class="section">
-    <div class="star"></div>
-    <h2>Our Vision Statement</h2>
-    <p>
-      Our vision is to forge a connection between parent and pet, creating a calm, confident
-      relationship. Our goal is to see dogs that are respected, cherished, and understood by their owners.
-    </p>
-    <a href="#" class="small-button">Our Vision</a>
-  </div>
+      <!-- Services / Why Train -->
+      <section>
+        <h2>Why train your dog through our services?</h2>
+        <h3>Connection & Bond</h3>
+        <p>
+          Building your connection and bond with your dog can be beneficial in
+          more ways than just training! We will do more to help you both grow.
+        </p>
+        <h3>Independence & Freedom</h3>
+        <p>
+          We understand you have specific needs and wants for training, but we
+          will help you soar! We will help in ways you may not have even
+          considered with you and your dog’s freedom and independence.
+        </p>
+        <h3>Positive Learning & Experiences</h3>
+        <p>
+          With our background education and knowledge, we understand how
+          important experiences and learning are when training.
+        </p>
+      </section>
 
-  <div class="section">
-    <h2>Why train your dog through our services?</h2>
-    <h3>Connection & Bond</h3>
-    <p>
-      Build your connection and bond by learning more about your dog and how they think.
-    </p>
-    <h3>Independence & Freedom</h3>
-    <p>
-      We focus on how training helps dogs and humans gain more independence, reducing stress and making your dog respond more consistently.
-    </p>
-    <h3>Positive Learning & Experiences</h3>
-    <p>
-      We guarantee a positive experience for dogs and owners, focusing on communication and learning through positive reinforcement.
-    </p>
-  </div>
+      <!-- FAQs -->
+      <section>
+        <div class="circle"></div>
+        <h2>FAQs</h2>
+        <button class="btn">Find More Here!</button>
+      </section>
 
-  <script>
-    function toggleMenu() {
-      document.body.classList.toggle('menu-open');
-    }
-  </script>
-</body>
+      <!-- Testimonials & CTA -->
+      <section>
+        <div class="circle"></div>
+        <h2>Testimonials</h2>
+        <button class="btn">Click here!</button>
+        <p>We are looking forward to hearing from you!</p>
+        <button class="btn">Book Now!</button>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>Contact us: (208) 884-2673 | kwilcox@carroll.edu</p>
+      <p>&copy; Copyright</p>
+    </footer>
+    <script>
+      function toggleMenu() {
+        document.body.classList.toggle("menu-open");
+      }
+    </script>
+  </body>
 </html>
