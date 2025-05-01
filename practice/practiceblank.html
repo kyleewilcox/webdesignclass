@@ -1,133 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Underdog Services</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Font imports -->
-  <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Chango', cursive; color: #000; background: #fff; line-height: 1.4; }
-    header { background: #ff99cc; color: #000; padding: 1rem; display: flex; align-items: center; justify-content: space-between; position: relative; }
-    header .logo { font-size: 1.2rem; }
-    /* Mobile menu toggle button */
-    .menu-toggle { font-size: 1.5rem; background: none; border: none; cursor: pointer; }
-    /* Mobile nav menu */
-    .nav-menu { display: none; flex-direction: column; background-color: #f5b7d3; position: absolute; top: 100%; right: 1rem; width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-    .nav-menu a { padding: 15px; text-decoration: none; color: black; border-bottom: 1px solid #ddd; }
-    .nav-menu a:hover { background-color: #d889c8; color: white; }
-    /* Show menu when open */
-    .menu-open .nav-menu { display: flex; }
-
-    /* Allow hero image to span full width under header */
-    main { padding: 0 1rem; }
-    .hero { margin: 0 -1rem; }
-    .hero img { display: block; width: 100%; margin: 0; border-radius: 0; }
-
-    section { margin: 2rem 0; padding: 0 1rem; text-align: center; }
-    section h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-    /* Paragraphs use Comfortaa */
-    section p { font-family: 'Comfortaa', cursive; font-size: 0.9rem; margin-bottom: 1rem; }
-    .btn { background: #ff99cc; color: #000; padding: 0.75rem 1.5rem; border: none; border-radius: 2rem; font-size: 1rem; cursor: pointer; }
-    /* Testimonials spacing */
-    section:last-of-type .btn + p { margin-top: 1.5rem; margin-bottom: 1.5rem; }
-    .circle { width: 4rem; height: 4rem; background: #ff99cc; border-radius: 50%; margin: 1rem auto; }
-    .star { font-size: 4rem; color: #ff99cc; margin: 0.5rem auto; }
-    /* Footer styling and font */
-    footer { background: #ff99cc; color: #000; padding: 1rem; text-align: center; font-family: 'Comfortaa', cursive; }
-
-    @media (min-width: 600px) {
-      main { max-width: 500px; margin: 0 auto; padding: 0; }
-      .hero { margin: 0; }
-      section { padding: 0; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Training Team</title>
+    <link rel="stylesheet" href="../styles/base.css" />
+    <!-- Google Fonts - Chango and Comfortaa -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chango&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-  <header>
-    <div class="logo">⭐ Underdog Services</div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <nav class="nav-menu" id="navMenu">
-      <a href="pages/about-us.html">About Us</a>
-      <a href="pages/our-values.html">Our Values</a>
-      <a href="pages/programs.html">Programs</a>
-      <a href="pages/testimonials.html">Testimonials</a>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Hero / Build Your Bond -->
-    <section class="hero">
-      <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="Two yellow Labrador Retriever puppies">
-      <h2>Build Your Bond Through Training</h2>
-      <p>Book a call with us today to get started on building your bond with your dog!</p>
-      <button class="btn">Book Now!</button>
-    </section>
-
-    <!-- About Us -->
-    <section>
-      <div class="circle"></div>
-      <h2>About Us</h2>
-      <p>We are staffed by trainers educated in Animal Science and certified by CCPDT and more. Our professional trainers consistently look for ways to improve and broaden their methods to better meet you and your dogs’ needs!</p>
-      <button class="btn">Read More!</button>
-    </section>
-
-    <!-- Mission Statement -->
-    <section>
-      <h2>Our Mission Statement</h2>
-      <p>We empower dog parents with the knowledge and confidence needed to enrich and strengthen the relationship with their dogs in a way that allows for stress-free days and promotes positive reinforcement, support, and compassion.</p>
-    </section>
-
-    <!-- Vision Statement -->
-    <section>
-      <div class="star">★</div>
-      <h2>Our Vision Statement</h2>
-      <p>Our vision is to foster a community where dog parents feel confident in their relationship with their dogs and where dogs feel supported, celebrated, and loved by their parents.</p>
-      <button class="btn">Our Values!</button>
-    </section>
-
-    <!-- Services / Why Train -->
-    <section>
-      <h2>Why train your dog through our services?</h2>
-      <h3>Connection & Bond</h3>
-      <p>Building your connection and bond with your dog can be beneficial in more ways than just training! We will do more to help you both grow.</p>
-      <h3>Independence & Freedom</h3>
-      <p>We understand you have specific needs and wants for training, but we will help you soar! We will help in ways you may not have even considered with you and your dog’s freedom and independence.</p>
-      <h3>Positive Learning & Experiences</h3>
-      <p>With our background education and knowledge, we understand how important experiences and learning are when training.</p>
-    </section>
-
-    <!-- FAQs -->
-    <section>
-      <div class="circle"></div>
-      <h2>FAQs</h2>
-      <button class="btn">Find More Here!</button>
-    </section>
-
-    <!-- Testimonials & CTA -->
-    <section>
-      <div class="circle"></div>
-      <h2>Testimonials</h2>
-      <button class="btn">Click here!</button>
-      <p>We are looking forward to hearing from you!</p>
-      <button class="btn">Book Now!</button>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>Contact us: (208) 884-2673 | kwilcox@carroll.edu</p>
-    <p>&copy; Copyright</p>
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      document.body.classList.toggle('menu-open');
-    }
-  </script>
+    <div class="main-content">
+        <div class="about-us">
+            <h2>About Us</h2>
+        </div>
+        
+        <div class="team-container">
+            <div class="team-member">
+                <div class="profile-pic"></div>
+                <h3 class="member-name">Kylee</h3>
+                <p class="member-bio">Kylee is the owner and lead trainer here at US. She's graduating from Cornell College with a BA in Anthropology and is working on earning many different certifications including CCPDT training!</p>
+            </div>
+            
+            <div class="team-member">
+                <div class="profile-pic"></div>
+                <h3 class="member-name">Kora</h3>
+                <p class="member-bio">Kora is the lead Demo Dog at US! She is a German Shepherd mix from a rescue! While she has been in the business as long as Kylee and is still learning something new every day!</p>
+            </div>
+            
+            <div class="team-member">
+                <div class="profile-pic"></div>
+                <h3 class="member-name">Nathan</h3>
+                <p class="member-bio">Nathan is our staff member looking most forward to earning his CCPDT! He has been training under us while he earns the required hours and will be long enough to help with any questions you may have!</p>
+            </div>
+            
+            <div class="team-member">
+                <div class="profile-pic"></div>
+                <h3 class="member-name">Brad</h3>
+                <p class="member-bio">Brad is a Blue Heeler mix from a shelter who loves his job as a demo dog and does great with all sorts of human friends!</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
